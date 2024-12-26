@@ -1,11 +1,16 @@
 {
   "name": "cdn.how",
   "module": "index.ts",
-  "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@types/three": "^0.171.0",
+    "three": "^0.171.0",
+    "three-globe": "^2.37.5"
   }
 }
