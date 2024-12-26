@@ -8,7 +8,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "bun run index.ts"
+    "build": "worker=true bun run index.ts"
   },
   "type": "module",
   "dependencies": {

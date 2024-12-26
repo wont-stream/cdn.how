@@ -1,9 +1,22 @@
+import { unlink } from "node:fs/promises";
 const js = await Bun.build({
     entrypoints: ["./src/index.ts"],
     minify: true,
-    sourcemap: "none"
+    sourcemap: "none",
+    outdir: "./dist",
 })
 
-const html = await Bun.file("./src/index.html")
+let html = await Bun.file("./src/index.html").text()
 
-Bun.write("dist/index.html", (await html.text()).replace('<script src="./stars.js" defer async type="module" ></script>', `<script>${await js.outputs[0].text()}</script>`))
+html = html.replace('<script></script>', `<script>${await Bun.file("./dist/index.js").text()}</script>`)
+
+try {
+    await unlink("dist/index.html")
+} catch (e) {
+    console.log("Unable to delete file")
+}
+Bun.write("dist/index.html", html)
+
+if (process.env.worker !== "true") {
+   await Bun.$`bunx --bun http-server dist`
+}
