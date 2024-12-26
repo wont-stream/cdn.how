@@ -1,16 +1,17 @@
 import { unlink } from "node:fs/promises";
-await Bun.build({
+const file = await Bun.build({
     entrypoints: ["./src/index.ts"],
     minify: true,
     sourcemap: "none",
     outdir: "./dist",
+    naming: {
+        entry: "[name]-[hash].[ext]",
+    }
 })
-
-const js = await Bun.file("./dist/index.js").text()
 
 let html = await Bun.file("./src/index.html").text()
 
-html = html.replace("<!-- SCRIPT HERE -->", `<script>${js}</script>`)
+html = html.replace("<!-- SCRIPT HERE -->", `<script src="index-${file.outputs[0].hash}.js" defer async></script>`)
 
 try {
     await unlink("dist/index.html")
