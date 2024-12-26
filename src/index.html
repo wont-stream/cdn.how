@@ -10,7 +10,69 @@
     <meta name="description" content="This, is not a CDN.">
 
     <style>
-        @import url("https://static.cdn.how/circularstd/_.css");
+        @font-face {
+            font-family: "Circular Std";
+            src: url("https://static.cdn.how/circularstd/Black.woff2") format("woff2"), url("https://static.cdn.how/circularstd/Black.woff") format("woff"), url("https://static.cdn.how/circularstd/Black.ttf") format("truetype"), url("https://static.cdn.how/circularstd/Black.eot") format("embedded-opentype"), url("https://static.cdn.how/circularstd/Black.svg#Black") format("svg");
+            font-weight: black;
+            font-style: normal;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Circular Std";
+            src: url("https://static.cdn.how/circularstd/BlackItalic.woff2") format("woff2"), url("https://static.cdn.how/circularstd/BlackItalic.woff") format("woff"), url("https://static.cdn.how/circularstd/BlackItalic.ttf") format("truetype"), url("https://static.cdn.how/circularstd/BlackItalic.eot") format("embedded-opentype"), url("https://static.cdn.how/circularstd/BlackItalic.svg#BlackItalic") format("svg");
+            font-weight: black;
+            font-style: italic;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Circular Std";
+            src: url("https://static.cdn.how/circularstd/Bold.woff2") format("woff2"), url("https://static.cdn.how/circularstd/Bold.woff") format("woff"), url("https://static.cdn.how/circularstd/Bold.ttf") format("truetype"), url("https://static.cdn.how/circularstd/Bold.eot") format("embedded-opentype"), url("https://static.cdn.how/circularstd/Bold.svg#Bold") format("svg");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Circular Std";
+            src: url("https://static.cdn.how/circularstd/BoldItalic.woff2") format("woff2"), url("https://static.cdn.how/circularstd/BoldItalic.woff") format("woff"), url("https://static.cdn.how/circularstd/BoldItalic.ttf") format("truetype"), url("https://static.cdn.how/circularstd/BoldItalic.eot") format("embedded-opentype"), url("https://static.cdn.how/circularstd/BoldItalic.svg#BoldItalic") format("svg");
+            font-weight: 700;
+            font-style: italic;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Circular Std";
+            src: url("https://static.cdn.how/circularstd/Book.woff2") format("woff2"), url("https://static.cdn.how/circularstd/Book.woff") format("woff"), url("https://static.cdn.how/circularstd/Book.ttf") format("truetype"), url("https://static.cdn.how/circularstd/Book.eot") format("embedded-opentype"), url("https://static.cdn.how/circularstd/Book.svg#Book") format("svg");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Circular Std";
+            src: url("https://static.cdn.how/circularstd/BookItalic.woff2") format("woff2"), url("https://static.cdn.how/circularstd/BookItalic.woff") format("woff"), url("https://static.cdn.how/circularstd/BookItalic.ttf") format("truetype"), url("https://static.cdn.how/circularstd/BookItalic.eot") format("embedded-opentype"), url("https://static.cdn.how/circularstd/BookItalic.svg#BookItalic") format("svg");
+            font-weight: 400;
+            font-style: italic;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Circular Std";
+            src: url("https://static.cdn.how/circularstd/Medium.woff2") format("woff2"), url("https://static.cdn.how/circularstd/Medium.woff") format("woff"), url("https://static.cdn.how/circularstd/Medium.ttf") format("truetype"), url("https://static.cdn.how/circularstd/Medium.eot") format("embedded-opentype"), url("https://static.cdn.how/circularstd/Medium.svg#Medium") format("svg");
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Circular Std";
+            src: url("https://static.cdn.how/circularstd/MediumItalic.woff2") format("woff2"), url("https://static.cdn.how/circularstd/MediumItalic.woff") format("woff"), url("https://static.cdn.how/circularstd/MediumItalic.ttf") format("truetype"), url("https://static.cdn.how/circularstd/MediumItalic.eot") format("embedded-opentype"), url("https://static.cdn.how/circularstd/MediumItalic.svg#MediumItalic") format("svg");
+            font-weight: 500;
+            font-style: italic;
+            font-display: swap
+        }
 
         html,
         body {
@@ -123,7 +185,7 @@
             <div class="content">
                 <h1>Ich, bin Seth.</h1>
                 <div>
-                    <a href="https://github.com/wont-stream" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/wont-stream" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-github">
@@ -133,7 +195,7 @@
                         </svg>
                     </a>
                     <span class="spacer"></span>
-                    <a href="https://artist.link/echoed_away" target="_blank" rel="noopener noreferrer">
+                    <a href="https://artist.link/echoed_away" target="_blank" rel="noopener noreferrer" aria-label="Music">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-music">
@@ -145,7 +207,7 @@
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
 
     <!-- SCRIPT HERE -->
 </body>
