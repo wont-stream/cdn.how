@@ -24,7 +24,7 @@ const color = new AmbientLight(0xcccccc, 5)
 scene.add(color);
 
 (function animate() {
-  if (document.visibilityState == "visible") {
+  if (document.visibilityState === "visible") {
     renderer.render(scene, camera);
     globe.rotation.y -= 0.001;
   }
