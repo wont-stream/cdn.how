@@ -15,5 +15,6 @@
     "@types/three": "^0.171.0",
     "three": "^0.171.0",
     "three-globe": "^2.37.5"
-  }
+  },
+  "sideEffects": false
 }
