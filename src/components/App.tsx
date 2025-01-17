@@ -1,7 +1,7 @@
 import Hero from "./Hero";
 import IconAnchor from "./IconAnchor";
 
-import { Music, } from "lucide-preact";
+import { Music } from "lucide-preact";
 import { SiGithub, SiForgejo, SiInstagram } from "react-icons/si";
 
 import "./App.css";
