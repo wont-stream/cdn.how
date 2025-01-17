@@ -6,6 +6,8 @@ import { join } from "node:path";
 
 const glob = new Glob("**/*");
 
+const NOWATCH = process.env.NOWATCH === "1";
+
 const build = async () => {
 	const start = Date.now();
 	const built = await Bun.build({
@@ -15,10 +17,10 @@ const build = async () => {
 		experimentalCss: true,
 		splitting: true,
 		sourcemap: "linked",
-		...(process.env.NOWATCH === "1" ? {minify: true} : {})
+		...(NOWATCH ? {minify: true} : {})
 	});
 	const end = Date.now();
-	//await cleanOldFiles(built.outputs);
+	if (NOWATCH) await cleanOldFiles(built.outputs);
 	console.log("Did build", built.success, built.logs);
 	console.log("Build time:", end - start, "ms");
 };
@@ -41,7 +43,7 @@ const cleanOldFiles = async (outputs: BuildArtifact[]) => {
 	);
 };
 
-if (process.env.NOWATCH !== "1") {
+if (!NOWATCH) {
 	watch(import.meta.dir, { recursive: true }, async (_, file) => {
 		if (!file?.startsWith("dist")) return await build();
 		return;
