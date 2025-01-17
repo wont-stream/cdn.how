@@ -1,0 +1,53 @@
+.hero {
+  scroll-snap-align: start;
+  position: relative;
+  background: #111111;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 4rem;
+  margin: 0 0px;
+  line-height: 1;
+}
+
+.hero p {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  color: #DEDEDE
+}
+
+.waves-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./header.svg")
+}
+
+.waves-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./footer.svg")
+}
