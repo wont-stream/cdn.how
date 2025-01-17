@@ -15,7 +15,7 @@ const build = async () => {
 		experimentalCss: true,
 		splitting: true,
 		sourcemap: "linked",
-		//minify: true,
+		...(process.env.NOWATCH === "1" ? {minify: true} : {})
 	});
 	const end = Date.now();
 	await cleanOldFiles(built.outputs);
