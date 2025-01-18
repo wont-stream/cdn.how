@@ -20,7 +20,7 @@ const build = async () => {
 		...(NOWATCH ? { minify: true } : {}),
 	});
 	const end = Date.now();
-	if (NOWATCH) await cleanOldFiles(built.outputs);
+	if (!NOWATCH) await cleanOldFiles(built.outputs);
 	console.log("Did build", built.success, built.logs);
 	console.log("Build time:", end - start, "ms");
 };
