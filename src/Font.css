@@ -1,0 +1,61 @@
+@font-face {
+	font-family: "Circular Std";
+	src: url("../../public/circularstd/Black.woff2") format("woff2");
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../../public/circularstd/BlackItalic.woff2") format("woff2");
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../../public/circularstd/Bold.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../../public/circularstd/BoldItalic.woff2") format("woff2");
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../../public/circularstd/Book.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../../public/circularstd/BookItalic.woff2");
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../../public/circularstd/Medium.woff2");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../../public/circularstd/MediumItalic.woff2");
+	font-style: italic;
+	font-weight: 500;
+	font-display: swap;
+}

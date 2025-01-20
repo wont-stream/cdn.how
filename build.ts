@@ -7,7 +7,10 @@ const build = async (minify: boolean) => {
         experimentalCss: true,
         splitting: true,
         sourcemap: "linked",
-        minify
+        minify,
+        loader: {
+            ".woff2": "file",
+        }
     });
     const end = Date.now();
     console.log("Did build", built.success, built.logs);

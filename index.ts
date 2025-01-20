@@ -3,7 +3,7 @@ import { watch } from "node:fs";
 const build = async () => {
 	const build = await import("./build");
 
-	build.default(false);
+	await build.default(false);
 }
 
 watch(import.meta.dir, { recursive: true }, async (_, file) => {
