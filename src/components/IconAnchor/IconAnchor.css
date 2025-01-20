@@ -3,14 +3,14 @@
 }
 
 a {
-	color: #DCDCDC; /* Warm orange for default link */
-	text-decoration: none; /* Remove underline */
+	color: #DCDCDC;
+	text-decoration: none;
 }
 
 a:hover {
-	color: #808080; /* Brighter red-orange on hover */
+	color: #808080;
 }
 
 a:active {
-	color: #A9A9A9; /* Darker orange when active */
+	color: #A9A9A9;
 }
