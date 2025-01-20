@@ -4,7 +4,7 @@ const build = async () => {
 	const build = await import("./build");
 
 	await build.default(false);
-}
+};
 
 watch(import.meta.dir, { recursive: true }, async (_, file) => {
 	if (file?.startsWith("dist")) return;
