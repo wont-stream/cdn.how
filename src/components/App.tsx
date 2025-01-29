@@ -1,15 +1,31 @@
 import Hero from "./Hero";
-import IconAnchor from "./IconAnchor";
+//import IconAnchor from "./IconAnchor";
+import Countdown from "react-countdown";
 
-import { Music } from "lucide-preact";
-import { SiGithub, SiForgejo, SiInstagram } from "react-icons/si";
+//import { /*Music,*/ Globe } from "lucide-preact";
+//import { SiGithub, SiForgejo, SiInstagram } from "react-icons/si";
 
 import "./App.css";
 
 export default () => {
 	return (
 		<div class="container">
-			<Hero title="This is not a CDN." waves="header" />
+			<Hero
+				waves="header"
+				title="This is not a CDN."
+				paragraph={`Coming ${new Date().getFullYear() + 1}`}
+				links={[<Countdown key="countdown"
+					date={Date.now() + 2000}
+					intervalDelay={0}
+					precision={1000}
+					zeroPadTime={2}
+					renderer={props => <span>{props.total.toString().padStart(10, "0")} ms..</span>}
+					onComplete={() => {
+						window.location.replace("https://ipv4.army");
+					}}
+					/>]}
+			/>
+			{/*
 			<hr />
 			<Hero
 				title="This, is Audiophile, Basshead and Techie."
@@ -46,6 +62,7 @@ export default () => {
 				]}
 				waves="footer"
 			/>
+			*/}
 		</div>
 	);
 };
