@@ -2,8 +2,8 @@ import Hero from "./Hero";
 //import IconAnchor from "./IconAnchor";
 import Countdown from "react-countdown";
 
-//import { /*Music,*/ Globe } from "lucide-preact";
-//import { SiGithub, SiForgejo, SiInstagram } from "react-icons/si";
+////import { /*/*Music,*/ Globe,*/ Globe } from "lucide-preact";
+////import { SiGithub, SiForgejo, SiInstagram } from "react-icons/si";
 
 import "./App.css";
 
