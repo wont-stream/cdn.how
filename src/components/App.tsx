@@ -14,16 +14,21 @@ export default () => {
 				waves="header"
 				title="This is not a CDN."
 				paragraph={`Coming ${new Date().getFullYear() + 1}`}
-				links={[<Countdown key="countdown"
-					date={Date.now() + 2000}
-					intervalDelay={0}
-					precision={1000}
-					zeroPadTime={2}
-					renderer={props => <span>{props.total.toString().padStart(10, "0")} ms..</span>}
-					onComplete={() => {
-						window.location.replace("https://ipv4.army");
-					}}
-					/>]}
+				links={[
+					<Countdown
+						key="countdown"
+						date={Date.now() + 2000}
+						intervalDelay={0}
+						precision={1000}
+						zeroPadTime={2}
+						renderer={(props) => (
+							<span>{props.total.toString().padStart(10, "0")} ms..</span>
+						)}
+						onComplete={() => {
+							window.location.replace("https://ipv4.army");
+						}}
+					/>,
+				]}
 			/>
 			{/*
 			<hr />
